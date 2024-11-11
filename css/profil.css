@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+a
 .container {
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
 }
 
 .sidebar {
-    width: 250px;
+    width: 180px;
     background-color: #fafafa;
     padding: 2rem 1rem;
     border-right: 1px solid #ddd;
@@ -130,7 +130,7 @@
 
 button {
     padding: 0.7rem 1.5rem;
-    background-color: #EDA5A6;
+    background-color: #8e7ab5;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -138,5 +138,5 @@ button {
 }
 
 button:hover {
-    background-color: #EDA5A6;
+    background-color: #8e7ab5;
 }
