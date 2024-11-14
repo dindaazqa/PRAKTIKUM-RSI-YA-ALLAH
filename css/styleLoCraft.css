@@ -13,38 +13,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
     border-bottom: 1px solid #ddd;
 }
 
-.header .logo {
-    font-size: 24px;
-    font-weight: bold;
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
-.header .search-bar input {
-    padding: 5px;
-    border: 1px solid #ddd;
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
-.header .search-bar button {
-    padding: 5px 10px;
-    background-color: #8e7ab5;
-    color: #fff;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-actions button {
+    padding: 0.5rem 1rem;
+    background-color: #8e7ab5; 
+    color: #fff; 
     border: none;
-    justify-content: center;
-    align-items: center;   
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-
-.header text {
-    text-align: center;
-}
-
-.header .header-icons span {
-    margin-left: 20px;
-    text-align: right;
+.header-actions button:hover {
+    background-color: #8e7ab5;
 }
 
 .main-content {
@@ -116,26 +117,4 @@ body {
 .product p {
     color: #676465;
     font-weight: normal;
-}
-
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #0f0e0e;
-    border-top: 1px solid #0c0c0c;
-    color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.footer input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.footer button {
-    padding: 10px 20px;
-    background-color: #8e7ab5;
-    color: #fff;
-    border: none;
 }
