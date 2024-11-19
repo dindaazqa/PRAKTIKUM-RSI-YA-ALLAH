@@ -20,6 +20,10 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+.logo img {
+    max-height: 70px;
+}
+
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -31,14 +35,19 @@ body {
     color: #333;
 }
 
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.header-actions input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .header-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
     background-color: #eda5a6;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .container {
@@ -66,7 +75,7 @@ body {
 }
 
 .sidebar ul li a.active {
-    background-color: #8e7ab552;
+    background-color: #eda5a674;
     font-weight: normal;
 }
 
@@ -116,6 +125,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.profile-photo button {
+    background-color: #8e7ab5;
+    margin-top: 1rem;
+}
+
+.profile-photo input {
+    margin-left: 5rem;
 }
 
 .profile-photo img {
