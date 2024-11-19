@@ -1,0 +1,163 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    margin-top: 0; /* Ensure there's no top margin to remove gap */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #eda5a6;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fafafa;
+    padding: 2rem 1rem;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    color: #333;
+}
+
+.sidebar ul li a.active {
+    background-color: #eda5a674;
+    font-weight: normal;
+}
+
+.order-history {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.order-history section {
+    background-color: #fafafa;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-history h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+.view-details {
+    color: #8e7ab5;
+    text-decoration: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.pagination a.active {
+    background-color: #eda5a6;
+    color: #fff;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
