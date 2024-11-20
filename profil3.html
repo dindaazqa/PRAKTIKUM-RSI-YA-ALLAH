@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Order History</a></li>
+                <li><a href="/orderHistory.html">Order History</a></li>
                 <li><a href="#">Account</a></li>
                 <li><a href="#">Chat</a></li>
             </ul>
@@ -29,12 +29,12 @@
     <div class="container">
         <aside class="sidebar">
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Order History</a></li>
-                <li><a href="#">Wishlist</a></li>
-                <li><a href="#">Manage Card</a></li>
-                <li><a class="active" href="#">Settings</a></li>
-                <li><a href="#">Log Out</a></li>
+                <li data-tab="dashboard">Dashboard</li>
+                <li><a href="/orderHistory.html">Order History</a></li>
+                <li data-tab="wishlist">Wishlist</li>
+                <li data-tab="cart">Shopping Cart</li>
+                <li><a href="/profil3.html">Settings</a></li>
+                <li data-tab="logout">Log-out</li>
             </ul>
         </aside>
         
@@ -42,17 +42,19 @@
             <section class="profile-section">
                 <h2>Account Settings</h2>
                 <div class="account-settings-container">
-                    <form class="profile-form">
+                    <form class="profile-form" action="process_form.php" method="post">
+                        <input type="hidden" name="profile_submit" value="1">
                         <label>First Name</label>
-                        <input type="text" value="Niki">
+                        <input type="text" name="first_name" value="Niki">
                         <label>Last Name</label>
-                        <input type="text" value="Badjideh">
+                        <input type="text" name="last_name" value="Badjideh">
                         <label>Email</label>
-                        <input type="email" value="nikibadjideh@gmail.com">
+                        <input type="email" name="email" value="nikibadjideh@gmail.com">
                         <label>Phone</label>
-                        <input type="text" value="123-456-7890">
+                        <input type="text" name="phone" value="123-456-7890">
                         <button type="submit">Save Changes</button>
                     </form>
+                    
 
                     <div class="profile-photo">
                         <img src="IMAGE/jiwon.png" alt="Profile" id="profileImage">
@@ -62,30 +64,77 @@
                 </div>
                 
                 <h2>Billing Address</h2>
-                <form class="billing-form">
+                <form class="billing-form" action="process_form.php" method="post">
+                    <input type="hidden" name="billing_submit" value="1">
                     <label>First Name</label>
-                    <input type="text" value="Niki">
+                    <input type="text" name="billing_first_name" value="Niki">
                     <label>Last Name</label>
-                    <input type="text" value="Badjideh">
+                    <input type="text" name="billing_last_name" value="Badjideh">
                     <label>Address</label>
-                    <input type="text" value="jalan terusan cikampek no. 12A">
+                    <input type="text" name="billing_address" value="jalan terusan cikampek no. 12A">
                     <label>Phone</label>
-                    <input type="text" value="123-456-7890">
+                    <input type="text" name="billing_phone" value="123-456-7890">
                     <button type="submit">Save Changes</button>
                 </form>
                 
+                
                 <h2>Change Password</h2>
-                <form class="password-form">
+                <form class="password-form" action="process_form.php" method="post">
+                    <input type="hidden" name="password_submit" value="1">
                     <label>Current Password</label>
-                    <input type="password">
+                    <input type="password" name="current_password">
                     <label>New Password</label>
-                    <input type="password">
+                    <input type="password" name="new_password">
                     <label>Confirm Password</label>
-                    <input type="password">
+                    <input type="password" name="confirm_password">
                     <button type="submit">Change Password</button>
-                </form>
+                </form>                
             </section>
         </main>
     </div>
 </body>
 </html>
+
+<script>
+    // Select all form elements
+    document.addEventListener('DOMContentLoaded', () => {
+        const profileForm = document.querySelector('.profile-form');
+        const billingForm = document.querySelector('.billing-form');
+        const passwordForm = document.querySelector('.password-form');
+        const imageInput = document.querySelector('.profile-photo input[type="file"]');
+        const imageSubmitButton = document.querySelector('.profile-photo button');
+    
+        // Event listener for the profile form
+        profileForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form submission
+            alert('Profile changes saved!');
+            // Additional logic for handling the form data can go here
+        });
+    
+        // Event listener for the billing form
+        billingForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form submission
+            alert('Billing address updated!');
+            // Additional logic for handling the form data can go here
+        });
+    
+        // Event listener for the password change form
+        passwordForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form submission
+            alert('Password changed successfully!');
+            // Add password validation and logic here
+        });
+    
+        // Event listener for changing the profile image
+        imageSubmitButton.addEventListener('click', () => {
+            const file = imageInput.files[0];
+            if (file) {
+                alert('Image updated successfully!');
+                // Logic for previewing or uploading the image can go here
+            } else {
+                alert('Please select an image first!');
+            }
+        });
+    });
+    </script>
+    
